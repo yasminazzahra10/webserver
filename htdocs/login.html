@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+      body {
+        font-family: verdana;
+        background-color: #f1f1f1;
+        margin: center;
+        margin-top: 150px;
+        padding: 0;
+      }
+      
+      body.welcome {
+        background-color: none;
+        margin-top: 100px;
+      }
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 100px rgba(3, 0, 0, 0.1);
+      }
+      
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      label {
+        font-weight: bold;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #023974;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        color : #023974;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="welcome" style="color: #023974;">
+    <h1>WELCOME EVERYONE !!</h1>
+  </div>
+    <div class="container">
+        <h1 class="login" style="color: #023974;">Login Here</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'yasmin' && password === 'yasmin10') {
+                // Jika valid, alihkan ke halaman yang ditampilkan
+                window.location.href = 'http://127.0.0.1:5500/portofolio.html';
+            } else {
+                alert('Username atau password salah. Silakan coba lagi.');
+            }
+        });
+    </script>
+</body>
+</html>
